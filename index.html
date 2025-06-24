@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style Transfer User Study</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .progress {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      width: 1%;
+      height: 20px;
+      background-color: #4caf50;
+      text-align: center;
+      color: white;
+    }
+    .question-block {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    .images {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    .images img {
+      max-width: 300px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+    .question {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question p {
+      margin: 0;
+      font-weight: bold;
+    }
+    .options {
+      display: flex;
+      gap: 20px;
+    }
+    .submit-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Style Transfer User Study</h1>
+  <div class="progress">
+    <div class="progress-bar" style="width: 1%;">2 / 200</div>
+  </div>
+  <form>
+    <div class="question-block">
+      <h2>Sample 1</h2>
+      <div class="images">
+        <div>
+          <p style="text-align:center;">A</p>
+          <img src="images/result1.png" alt="A" />
+        </div>
+        <div>
+          <p style="text-align:center;">B</p>
+          <img src="images/result2.png" alt="B" />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>1. Which image better <strong>preserves the content</strong> of the original image?</p>
+        <div class="options">
+          <label><input type="radio" name="content1" value="A" required /> A</label>
+          <label><input type="radio" name="content1" value="B" /> B</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. Which image demonstrates the <strong>style transfer</strong> more effectively?</p>
+        <div class="options">
+          <label><input type="radio" name="style1" value="A" required /> A</label>
+          <label><input type="radio" name="style1" value="B" /> B</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-block">
+      <h2>Sample 2</h2>
+      <div class="images">
+        <div>
+          <p style="text-align:center;">A</p>
+          <img src="images/style1.png" alt="A" />
+        </div>
+        <div>
+          <p style="text-align:center;">B</p>
+          <img src="images/style2.png" alt="B" />
+        </div>
+      </div>
+
+      <div class="question">
+        <p>1. Which image better <strong>preserves the content</strong> of the original image?</p>
+        <div class="options">
+          <label><input type="radio" name="content2" value="A" required /> A</label>
+          <label><input type="radio" name="content2" value="B" /> B</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. Which image demonstrates the <strong>style transfer</strong> more effectively?</p>
+        <div class="options">
+          <label><input type="radio" name="style2" value="A" required /> A</label>
+          <label><input type="radio" name="style2" value="B" /> B</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
