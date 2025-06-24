@@ -33,15 +33,21 @@
       margin: 20px auto;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 800px;
+      max-width: 1000px;
     }
     .images {
       display: flex;
       justify-content: space-around;
       margin: 20px 0;
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+    .images .image-column {
+      text-align: center;
+      flex: 1;
     }
     .images img {
-      max-width: 300px;
+      max-width: 100%;
       height: auto;
       border: 2px solid #ccc;
       border-radius: 5px;
@@ -55,10 +61,13 @@
     .question p {
       margin: 0;
       font-weight: bold;
+      flex: 1;
     }
     .options {
       display: flex;
       gap: 20px;
+      flex: 1;
+      justify-content: flex-end;
     }
     .submit-button {
       text-align: center;
@@ -79,13 +88,21 @@
     <div class="question-block">
       <h2>Sample 1</h2>
       <div class="images">
-        <div>
-          <p style="text-align:center;">A</p>
+        <div class="image-column">
+          <p>Original Content</p>
+          <img src="images/content1.png" alt="Original Content" />
+        </div>
+        <div class="image-column">
+          <p>Style Reference</p>
+          <img src="images/style1.png" alt="Style Image" />
+        </div>
+        <div class="image-column">
+          <p>A</p>
           <img src="images/result1.png" alt="A" />
         </div>
-        <div>
-          <p style="text-align:center;">B</p>
-          <img src="images/result2.png" alt="B" />
+        <div class="image-column">
+          <p>B</p>
+          <img src="images/result11.png" alt="B" />
         </div>
       </div>
 
@@ -109,13 +126,21 @@
     <div class="question-block">
       <h2>Sample 2</h2>
       <div class="images">
-        <div>
-          <p style="text-align:center;">A</p>
-          <img src="images/style1.png" alt="A" />
+        <div class="image-column">
+          <p>Original Content</p>
+          <img src="images/content2.png" alt="Original Content" />
         </div>
-        <div>
-          <p style="text-align:center;">B</p>
-          <img src="images/style2.png" alt="B" />
+        <div class="image-column">
+          <p>Style Reference</p>
+          <img src="images/style2.png" alt="Style Image" />
+        </div>
+        <div class="image-column">
+          <p>A</p>
+          <img src="images/result22.png" alt="A" />
+        </div>
+        <div class="image-column">
+          <p>B</p>
+          <img src="images/result2.png" alt="B" />
         </div>
       </div>
 
